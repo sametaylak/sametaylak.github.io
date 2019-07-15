@@ -1,0 +1,57 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Samet Aylak</title>
+        <link>https://sametaylak.github.io/posts/</link>
+        <description>Recent content in Posts on Samet Aylak</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Mon, 15 Jul 2019 19:16:29 +0300</lastBuildDate>
+        <atom:link href="https://sametaylak.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>GPG Signed Commits</title>
+            <link>https://sametaylak.github.io/posts/2019/07/gpg-signed-commits/</link>
+            <pubDate>Mon, 15 Jul 2019 19:16:29 +0300</pubDate>
+            
+            <guid>https://sametaylak.github.io/posts/2019/07/gpg-signed-commits/</guid>
+            <description>Hello everyone, how is it going? Today I will show you how to sign your commits with GPG key. First of all, we should install GPG command-line tools.
+ Here is the link for download: https://www.gnupg.org/download/ Then we should open a terminal and type gpg --gen-key Type your real name and e-mail Verify your inputs Type a secure passphrase  Use the gpg --list-secret-keys --keyid-format LONG command to list GPG keys.</description>
+            <content type="html"><![CDATA[<p>Hello everyone, how is it going? Today I will show you how to sign your commits with GPG key. First of all, we should install GPG command-line tools.</p>
+
+<ul>
+<li>Here is the link for download: <a href="https://www.gnupg.org/download/" target="_blank">https://www.gnupg.org/download/</a></li>
+<li>Then we should open a terminal and type <code>gpg --gen-key</code></li>
+<li>Type your real name and e-mail</li>
+<li>Verify your inputs</li>
+<li>Type a secure passphrase</li>
+</ul>
+
+<p>Use the <code>gpg --list-secret-keys --keyid-format LONG</code> command to list GPG keys. A private key is required for signing commits.</p>
+
+<p>From the list of GPG keys, copy the GPG key ID you&rsquo;d like to use.</p>
+
+<pre><code>$ gpg --list-secret-keys --keyid-format LONG
+/Users/hubot/.gnupg/secring.gpg
+------------------------------------
+sec   4096R/3AA5C34371567BD2 2016-03-10 [expires: 2017-03-10]
+uid                          Hubot 
+ssb   4096R/42B317FD4BA89E7A 2016-03-10
+</code></pre>
+
+<p>In this case, the GPG key ID is <code>3AA5C34371567BD2</code></p>
+
+<p>Then, use the <code>gpg --armor --export 3AA5C34371567BD2</code> command to generate GPG key, in ASCII armor format.
+Add the GPG key to your GitHub account.( Settings &gt; SSH and GPG keys )</p>
+
+<p>After all these configuration steps, you should execute these two commands in your terminal.</p>
+
+<pre><code>git config --global commit.gpgsign true
+git config --global user.signingkey 3AA5C34371567BD2
+</code></pre>
+
+<p>Thanks for reading :)</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>
