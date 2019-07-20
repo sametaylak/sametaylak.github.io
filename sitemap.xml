@@ -3,23 +3,70 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://sametaylak.github.io/index.html</loc>
-    <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+    <loc>https://sametaylak.github.io/posts/2019/07/github-actions/</loc>
+    <lastmod>2019-07-20T23:37:35+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://sametaylak.github.io/</loc>
-    <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+    <loc>https://sametaylak.github.io/posts/</loc>
+    <lastmod>2019-07-20T23:37:35+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://sametaylak.github.io/index.html</loc>
+    <loc>https://sametaylak.github.io/</loc>
+    <lastmod>2019-07-20T23:37:35+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://sametaylak.github.io/tags/</loc>
+    <lastmod>2019-07-20T23:37:35+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sametaylak.github.io/tags/actions/</loc>
+    <lastmod>2019-07-20T23:37:35+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sametaylak.github.io/tags/github/</loc>
+    <lastmod>2019-07-20T23:37:35+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sametaylak.github.io/tags/github-actions/</loc>
+    <lastmod>2019-07-20T23:37:35+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sametaylak.github.io/posts/2019/07/gpg-signed-commits/</loc>
+    <lastmod>2019-07-15T19:16:29+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sametaylak.github.io/tags/git/</loc>
+    <lastmod>2019-07-15T19:16:29+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sametaylak.github.io/tags/gpg/</loc>
+    <lastmod>2019-07-15T19:16:29+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sametaylak.github.io/about/</loc>
+    <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sametaylak.github.io/index.html</loc>
     <priority>0</priority>
   </url>
   

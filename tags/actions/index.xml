@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>github on Samet Aylak</title>
-    <link>https://sametaylak.github.io/tags/github/</link>
-    <description>Recent content in github on Samet Aylak</description>
+    <title>actions on Samet Aylak</title>
+    <link>https://sametaylak.github.io/tags/actions/</link>
+    <description>Recent content in actions on Samet Aylak</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Sat, 20 Jul 2019 23:37:35 +0300</lastBuildDate>
     
-	<atom:link href="https://sametaylak.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sametaylak.github.io/tags/actions/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
       <description>Hello everyone, how is it going? Today, I will introduce to you GitHub Actions.
 Recently, I changed one of our project&amp;rsquo;s CI/CD pipeline to GitHub Actions from CircleCI. This is a unique experience for me. So let&amp;rsquo;s get started.
 As you know well, GitHub Actions still on the beta. There may bugs. Github Actions is a service for automating your projects. Like a CircleCI or Jenkins. You can build CI/CD pipelines for your projects.</description>
-    </item>
-    
-    <item>
-      <title>GPG Signed Commits</title>
-      <link>https://sametaylak.github.io/posts/2019/07/gpg-signed-commits/</link>
-      <pubDate>Mon, 15 Jul 2019 19:16:29 +0300</pubDate>
-      
-      <guid>https://sametaylak.github.io/posts/2019/07/gpg-signed-commits/</guid>
-      <description>Hello everyone, how is it going? Today I will show you how to sign your commits with GPG key. First of all, we should install GPG command-line tools.
- Here is the link for download: https://www.gnupg.org/download/ Then we should open a terminal and type gpg --gen-key Type your real name and e-mail Verify your inputs Type a secure passphrase  Use the gpg --list-secret-keys --keyid-format LONG command to list GPG keys.</description>
     </item>
     
   </channel>

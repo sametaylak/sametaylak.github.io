@@ -5,8 +5,124 @@
         <description>Recent content in Posts on Samet Aylak</description>
         <generator>Hugo -- gohugo.io</generator>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 15 Jul 2019 19:16:29 +0300</lastBuildDate>
+        <lastBuildDate>Sat, 20 Jul 2019 23:37:35 +0300</lastBuildDate>
         <atom:link href="https://sametaylak.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>GitHub Actions</title>
+            <link>https://sametaylak.github.io/posts/2019/07/github-actions/</link>
+            <pubDate>Sat, 20 Jul 2019 23:37:35 +0300</pubDate>
+            
+            <guid>https://sametaylak.github.io/posts/2019/07/github-actions/</guid>
+            <description>Hello everyone, how is it going? Today, I will introduce to you GitHub Actions.
+Recently, I changed one of our project&amp;rsquo;s CI/CD pipeline to GitHub Actions from CircleCI. This is a unique experience for me. So let&amp;rsquo;s get started.
+As you know well, GitHub Actions still on the beta. There may bugs. Github Actions is a service for automating your projects. Like a CircleCI or Jenkins. You can build CI/CD pipelines for your projects.</description>
+            <content type="html"><![CDATA[
+
+<p>Hello everyone, how is it going? Today, I will introduce to you GitHub Actions.</p>
+
+<p>Recently, I changed one of our project&rsquo;s CI/CD pipeline to GitHub Actions from CircleCI. This is a unique experience for me. So let&rsquo;s get started.</p>
+
+<p>As you know well, GitHub Actions still on the beta. There may bugs. Github Actions is a service for automating your projects. Like a CircleCI or Jenkins. You can build CI/CD pipelines for your projects. You can create multiple workflows. Let&rsquo;s create one step by step.</p>
+
+<ul>
+<li>Go to Actions on your repo</li>
+</ul>
+
+<p>{{ ss1 }}</p>
+
+<ul>
+<li>Create a new workflow</li>
+</ul>
+
+<p>{{ ss2 }}</p>
+
+<ul>
+<li>Here is what you should see</li>
+</ul>
+
+<p>{{ ss3 }}</p>
+
+<p>Now, let&rsquo;s suppose we have a NodeJS package. We want to build and deploy it on every push on the master branch. You can build workflow with a visual editor but my choice is code-based.</p>
+
+<pre><code>workflow &quot;New workflow&quot; {
+  resolves = [
+    &quot;Deploy&quot;
+  ]
+  on = &quot;push&quot;
+}
+</code></pre>
+
+<p>Resolves means which actions need to be run</p>
+
+<p>First, we need a filter for branch</p>
+
+<pre><code>action &quot;Master Branch Filter&quot; {
+  uses = &quot;actions/bin/filter@master&quot;
+  args = &quot;branch master&quot;
+}
+</code></pre>
+
+<p>Now, we can build the package</p>
+
+<pre><code>action &quot;Build&quot; {
+  uses = &quot;actions/npm@master&quot;
+  needs = &quot;Master Branch Filter&quot;
+  runs = &quot;npm&quot;
+  args = &quot;install&quot;
+}
+</code></pre>
+
+<p>Finally, we can deploy the package</p>
+
+<pre><code>action &quot;Deploy&quot; {
+  uses = &quot;actions/npm@master&quot;
+  needs = &quot;Build&quot;
+  runs = &quot;npm&quot;
+  args = &quot;publish --access public&quot;
+  secrets = [&quot;NPM_AUTH_TOKEN&quot;]
+}
+</code></pre>
+
+<p>As you can see, there is a <code>secrets</code> and <code>needs</code> field on Deploy Action. You can define secrets on <code>Settings &gt; Secrets</code> page. Needs field means this action need to be run <code>Build</code> action</p>
+
+<p>Final Code</p>
+
+<pre><code>workflow &quot;Node Package Pipeline&quot; {
+  resolves = [
+    &quot;Deploy&quot;
+  ]
+  on = &quot;push&quot;
+}
+
+action &quot;Master Branch Filter&quot; {
+  uses = &quot;actions/bin/filter@master&quot;
+  args = &quot;branch master&quot;
+}
+
+action &quot;Build&quot; {
+  uses = &quot;actions/npm@master&quot;
+  needs = &quot;Master Branch Filter&quot;
+  runs = &quot;npm&quot;
+  args = &quot;install&quot;
+}
+
+action &quot;Deploy&quot; {
+  uses = &quot;actions/npm@master&quot;
+  needs = &quot;Build&quot;
+  runs = &quot;npm&quot;
+  args = &quot;publish --access public&quot;
+  secrets = [&quot;NPM_AUTH_TOKEN&quot;]
+}
+</code></pre>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>After all, this is a good experience for me who works as a software developer. But there is not enough documentation for more complex workflows. There are several predefined actions. You can check it out in this link.</p>
+
+<p><a href="https://github.com/features/actions" target="_blank">https://github.com/features/actions</a></p>
+]]></content>
+        </item>
         
         <item>
             <title>GPG Signed Commits</title>
