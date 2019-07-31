@@ -5,8 +5,162 @@
         <description>Recent content in Posts on Samet Aylak</description>
         <generator>Hugo -- gohugo.io</generator>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Sat, 20 Jul 2019 23:37:35 +0300</lastBuildDate>
+        <lastBuildDate>Wed, 31 Jul 2019 15:34:34 +0300</lastBuildDate>
         <atom:link href="https://sametaylak.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Nginx Load Balancer</title>
+            <link>https://sametaylak.github.io/posts/2019/07/nginx-load-balancer/</link>
+            <pubDate>Wed, 31 Jul 2019 15:34:34 +0300</pubDate>
+            
+            <guid>https://sametaylak.github.io/posts/2019/07/nginx-load-balancer/</guid>
+            <description>Hey, everyone! How&amp;rsquo;s it going? Today, We will setup Nginx with Load Balancer.
+First of all, We should set ubuntu virtual machine. I&amp;rsquo;m gonna use Vagrant for this step.
+vagrant init bento/ubuntu-18.04 vagrant up  This commands will create a virtual machine and boot it for us. This may take a while if you have not ubuntu box.
+Then you can connect the virtual machine with vagrant ssh command. Now, we can install Nginx to our machine.</description>
+            <content type="html"><![CDATA[
+
+<p>Hey, everyone! How&rsquo;s it going? Today, We will setup <strong>Nginx</strong> with <strong>Load Balancer</strong>.</p>
+
+<p>First of all, We should set ubuntu virtual machine. I&rsquo;m gonna use Vagrant for this step.</p>
+
+<pre><code>vagrant init bento/ubuntu-18.04
+vagrant up
+</code></pre>
+
+<p>This commands will create a virtual machine and boot it for us. This may take a while if you have not ubuntu box.</p>
+
+<p>Then you can connect the virtual machine with <code>vagrant ssh</code> command. Now, we can install Nginx to our machine.</p>
+
+<pre><code>sudo apt-get update
+sudo apt-get install Nginx
+</code></pre>
+
+<p>You can check your Nginx server with that command:</p>
+
+<pre><code>curl localhost:80
+</code></pre>
+
+<h2 id="create-server-blocks">Create Server Blocks</h2>
+
+<p>Now, We can create out Server Blocks which means Virtual Hosts.</p>
+
+<pre><code>sudo mkdir -p /var/www/site1.com/html
+sudo mkdir -p /var/www/site2.com/html
+sudo mkdir -p /var/www/site3.com/html
+
+sudo chown -R $USER:$USER /var/www/site1.com/html
+sudo chown -R $USER:$USER /var/www/site2.com/html
+sudo chown -R $USER:$USER /var/www/site3.com/html
+
+sudo chmod -R 755 /var/www
+
+sudo touch /var/www/site1.com/html/index.html &amp;&amp; echo &quot;Response from Site1&quot; | sudo tee /var/www/site1.com/html/index.html
+sudo touch /var/www/site2.com/html/index.html &amp;&amp; echo &quot;Response from Site2&quot; | sudo tee /var/www/site2.com/html/index.html
+sudo touch /var/www/site3.com/html/index.html &amp;&amp; echo &quot;Response from Site3&quot; | sudo tee /var/www/site3.com/html/index.html
+</code></pre>
+
+<p>It&rsquo;s all done. We should create server block config files.</p>
+
+<pre><code>sudo vi /etc/nginx/sites-available/site1.com
+
+# listen 8081 for Site1
+# listen 8082 for Site2
+# listen 8083 for Site3
+
+server {
+        listen 8081;
+        listen [::]:8081;
+
+        root /var/www/site1.com/html;
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name site1.com www.site1.com;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
+</code></pre>
+
+<p>Now, It&rsquo;s time to enable our server block and restart nginx.</p>
+
+<pre><code>sudo ln -s /etc/nginx/sites-available/site1.com /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/site2.com /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/site3.com /etc/nginx/sites-enabled/
+</code></pre>
+
+<h2 id="edit-nginx-conf">Edit nginx.conf</h2>
+
+<pre><code>sudo vi /etc/nginx/nginx.conf
+</code></pre>
+
+<p>Within the file, find the <code>server_names_hash_bucket_size</code> directive. Remove the # symbol to uncomment the line</p>
+
+<pre><code>sudo nginx -t
+sudo systemctl restart nginx
+</code></pre>
+
+<h2 id="create-load-balancer-with-round-robin-strategy">Create Load Balancer with Round Robin Strategy</h2>
+
+<p>We are gonna create a load balancer on port 8080.</p>
+
+<pre><code>sudo vi /etc/nginx/conf.d/load-balancer.conf
+
+upstream balancer {
+    server localhost:8081; 
+    server localhost:8082; 
+    server localhost:8083; 
+}
+
+server {
+    listen 8080; 
+
+    location / {
+            proxy_pass http://balancer;
+    }
+}
+</code></pre>
+
+<p>Restart Nginx.</p>
+
+<p>You should edit <code>Vagrantfile</code>. Find <code>config.vm.network &quot;public_network&quot;</code> and remove the # symbol then restart the vagrant box.</p>
+
+<p>To find the public IP of the vagrant box, you should execute ifconfig in the virtual machine.</p>
+
+<p>Here is a bash script for testing the load balancer</p>
+
+<pre><code>#!/bin/bash
+
+for i in {1..100}
+do
+  curl 'http://[public_ip]:8080'
+done
+
+Output:
+Response from Site1
+Response from Site1
+Response from Site2
+Response from Site2
+Response from Site3
+Response from Site3
+Response from Site1
+Response from Site1
+Response from Site2
+Response from Site2
+Response from Site3
+Response from Site3
+Response from Site1
+Response from Site1
+Response from Site2
+Response from Site2
+</code></pre>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>As you can see in the output, there are different responses. Load balancers are useful when it comes to high traffic. I hope, this article would be useful to you. Thanks for reading :)</p>
+]]></content>
+        </item>
         
         <item>
             <title>GitHub Actions</title>
