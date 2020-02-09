@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Samet Aylak</title>
@@ -6,82 +6,9 @@
     <description>Recent content in Tags on Samet Aylak</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 31 Jul 2019 15:34:34 +0300</lastBuildDate>
     
 	<atom:link href="https://sametaylak.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>loadbalancer</title>
-      <link>https://sametaylak.github.io/tags/loadbalancer/</link>
-      <pubDate>Wed, 31 Jul 2019 15:34:34 +0300</pubDate>
-      
-      <guid>https://sametaylak.github.io/tags/loadbalancer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>nginx</title>
-      <link>https://sametaylak.github.io/tags/nginx/</link>
-      <pubDate>Wed, 31 Jul 2019 15:34:34 +0300</pubDate>
-      
-      <guid>https://sametaylak.github.io/tags/nginx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ubuntu</title>
-      <link>https://sametaylak.github.io/tags/ubuntu/</link>
-      <pubDate>Wed, 31 Jul 2019 15:34:34 +0300</pubDate>
-      
-      <guid>https://sametaylak.github.io/tags/ubuntu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>actions</title>
-      <link>https://sametaylak.github.io/tags/actions/</link>
-      <pubDate>Sat, 20 Jul 2019 23:37:35 +0300</pubDate>
-      
-      <guid>https://sametaylak.github.io/tags/actions/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>github</title>
-      <link>https://sametaylak.github.io/tags/github/</link>
-      <pubDate>Sat, 20 Jul 2019 23:37:35 +0300</pubDate>
-      
-      <guid>https://sametaylak.github.io/tags/github/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>github actions</title>
-      <link>https://sametaylak.github.io/tags/github-actions/</link>
-      <pubDate>Sat, 20 Jul 2019 23:37:35 +0300</pubDate>
-      
-      <guid>https://sametaylak.github.io/tags/github-actions/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>git</title>
-      <link>https://sametaylak.github.io/tags/git/</link>
-      <pubDate>Mon, 15 Jul 2019 19:16:29 +0300</pubDate>
-      
-      <guid>https://sametaylak.github.io/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>gpg</title>
-      <link>https://sametaylak.github.io/tags/gpg/</link>
-      <pubDate>Mon, 15 Jul 2019 19:16:29 +0300</pubDate>
-      
-      <guid>https://sametaylak.github.io/tags/gpg/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>

@@ -1,81 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://sametaylak.github.io/posts/2019/07/nginx-load-balancer/</loc>
-    <lastmod>2019-07-31T15:34:34+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sametaylak.github.io/posts/</loc>
-    <lastmod>2019-07-31T15:34:34+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sametaylak.github.io/tags/</loc>
-    <lastmod>2019-07-31T15:34:34+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sametaylak.github.io/tags/loadbalancer/</loc>
-    <lastmod>2019-07-31T15:34:34+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sametaylak.github.io/tags/nginx/</loc>
-    <lastmod>2019-07-31T15:34:34+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sametaylak.github.io/tags/ubuntu/</loc>
-    <lastmod>2019-07-31T15:34:34+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sametaylak.github.io/posts/2019/07/github-actions/</loc>
-    <lastmod>2019-07-20T23:37:35+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sametaylak.github.io/tags/actions/</loc>
-    <lastmod>2019-07-20T23:37:35+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sametaylak.github.io/tags/github/</loc>
-    <lastmod>2019-07-20T23:37:35+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sametaylak.github.io/tags/github-actions/</loc>
-    <lastmod>2019-07-20T23:37:35+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sametaylak.github.io/posts/2019/07/gpg-signed-commits/</loc>
-    <lastmod>2019-07-15T19:16:29+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sametaylak.github.io/tags/git/</loc>
-    <lastmod>2019-07-15T19:16:29+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sametaylak.github.io/tags/gpg/</loc>
-    <lastmod>2019-07-15T19:16:29+03:00</lastmod>
-    <priority>0</priority>
-  </url>
   
   <url>
     <loc>https://sametaylak.github.io/about/</loc>
@@ -88,8 +13,11 @@
   </url>
   
   <url>
-    <loc>https://sametaylak.github.io/index.html</loc>
-    <priority>0</priority>
+    <loc>https://sametaylak.github.io/posts/1/01/posts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://sametaylak.github.io/tags/</loc>
   </url>
   
 </urlset>
