@@ -17,7 +17,7 @@ I am a software engineer who is passionate about developing tools and solving ch
 
 Skills
 ===
-**General**: System design, microservices, real-time data handling, low-latency platforms, OOP(object oriented programming), functional programming, RAG(retrieval augmented generation), software testing, REST APIs, GraphQL.
+**General**: System design, microservices, real-time data handling, low-latency platforms, OOP(object oriented programming), functional programming, machine learning, software testing, REST APIs, GraphQL.
 
 **Programming Languages**: TypeScript, JavaScript, Python, Ruby, Golang, C, C#, SQL, HTML, CSS
 
@@ -65,4 +65,4 @@ Backoffice development for the restaurants. Worked on custom receipt printers fo
 
 Educations
 ===
-B.S. in Management Information Systems, Bartin University (*2015 - 2019*)
+BSc at the University of Bartin. This is where I first got into machine learning and neural networks. (*2015 - 2019*)
