@@ -23,7 +23,7 @@ author:
   # Biographic information
   avatar           : "profile.jpg"
   name             : "Samet Aylak"
-  pronouns         : "He/His"  
+  pronouns         : "He/Him/His"
   bio              : "Software Engineer"
   location         : "New York"
   employer         : "Toolio"
@@ -135,9 +135,9 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               : "google-analytics-4" # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "G-9F8NH0PS20"
 
 
 # Reading Files
