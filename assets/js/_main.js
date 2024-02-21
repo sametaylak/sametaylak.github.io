@@ -2,19 +2,39 @@
    jQuery plugin settings and other scripts
    ========================================================================== */
 
-$(document).ready(function(){
-   // Sticky footer
-  var bumpIt = function() {
-      $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
-    },
+$(document).ready(function () {
+  const codeBlocks = document.querySelectorAll("div.highlighter-rouge");
+
+  codeBlocks.forEach(function (codeblock, index) {
+    const code = codeBlocks[index].innerText;
+    const copyCodeButton = document.createElement("button");
+    copyCodeButton.innerHTML = "COPY";
+    copyCodeButton.classList = "btn";
+    // insert a copy button
+    copyCodeButton.onclick = function () {
+      window.navigator.clipboard.writeText(code);
+      copyCodeButton.innerHTML = "COPIED";
+
+      setTimeout(function () {
+        copyCodeButton.innerHTML = "COPY";
+      }, 2000);
+    };
+    // make the button
+    codeblock.appendChild(copyCodeButton);
+  });
+
+  // Sticky footer
+  var bumpIt = function () {
+    $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
+  },
     didResize = false;
 
   bumpIt();
 
-  $(window).resize(function() {
+  $(window).resize(function () {
     didResize = true;
   });
-  setInterval(function() {
+  setInterval(function () {
     if (didResize) {
       didResize = false;
       bumpIt();
@@ -26,7 +46,7 @@ $(document).ready(function(){
   // init sticky sidebar
   $(".sticky").Stickyfill();
 
-  var stickySideBar = function(){
+  var stickySideBar = function () {
     var show = $(".author__urls-wrapper button").length === 0 ? $(window).width() > 1024 : !$(".author__urls-wrapper button").is(":visible");
     // console.log("has button: " + $(".author__urls-wrapper button").length === 0);
     // console.log("Window Width: " + windowWidth);
@@ -46,19 +66,19 @@ $(document).ready(function(){
 
   stickySideBar();
 
-  $(window).resize(function(){
+  $(window).resize(function () {
     stickySideBar();
   });
 
   // Follow menu drop down
 
-  $(".author__urls-wrapper button").on("click", function() {
-    $(".author__urls").fadeToggle("fast", function() {});
+  $(".author__urls-wrapper button").on("click", function () {
+    $(".author__urls").fadeToggle("fast", function () { });
     $(".author__urls-wrapper button").toggleClass("open");
   });
 
   // init smooth scroll
-  $("a").smoothScroll({offset: -20});
+  $("a").smoothScroll({ offset: -20 });
 
   // add lightbox class to all image links
   $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
@@ -76,7 +96,7 @@ $(document).ready(function(){
     gallery: {
       enabled: true,
       navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
     },
     image: {
       tError: '<a href="%url%">Image #%curr%</a> could not be loaded.',
@@ -86,7 +106,7 @@ $(document).ready(function(){
     // make it unique to apply your CSS animations just to this exact popup
     mainClass: 'mfp-zoom-in',
     callbacks: {
-      beforeOpen: function() {
+      beforeOpen: function () {
         // just a hack that adds mfp-anim class to markup
         this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
       }

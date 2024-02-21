@@ -2,29 +2,3 @@
 
 {% include analytics.html %}
 {% include /comments-providers/scripts.html %}
-
-<script type="text/javascript">
-    function InitCopyPaste() {
-        const codeBlocks = document.querySelectorAll("div.highlighter-rouge");
-
-        codeBlocks.forEach((codeblock, index) => {
-            const code = codeBlocks[index].innerText;
-            const copyCodeButton = document.createElement("button");
-            copyCodeButton.innerHTML = "COPY";
-            copyCodeButton.classList = "btn";
-            // insert a copy button
-            copyCodeButton.onclick = function () {
-                window.navigator.clipboard.writeText(code);
-                copyCodeButton.innerHTML = "COPIED";
-
-                setTimeout(() => {
-                    copyCodeButton.innerHTML = "COPY";
-                }, 2000);
-            };
-            // make the button
-            codeblock.appendChild(copyCodeButton);
-        });
-    }
-
-    document.addEventListener("DOMContentLoaded", InitCopyPaste);
-</script>
