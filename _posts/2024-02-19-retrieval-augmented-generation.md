@@ -12,6 +12,8 @@ tags:
   - retrieval augmented generation
 ---
 
+![RAG + AI](/images/post_1.webp)
+
 Well, when it comes to AI, I find the RAG approach quite useful for interacting with data.
 
 Let's consider it this way: you have a vast, immersive dataset lying somewhere. When you need to extract information from it, you have to search for it. This might take some time, depending on your data size.
