@@ -63,6 +63,10 @@ Backoffice development for the restaurants. Worked on custom receipt printers fo
 *Vue, TypeScript, JavaScript, Ruby on Rails, GraphQL, RSpec, Jest, HTML, CSS, Jira, Slack*
 {: .notice}
 
+Courses
+===
+**Harvard CS50**, Introduction to Computer Science
+
 Educations
 ===
 BSc at the University of Bartin. This is where I first got into machine learning and neural networks. (*2015 - 2019*)
