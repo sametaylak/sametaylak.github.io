@@ -66,6 +66,7 @@ Backoffice development for the restaurants. Worked on custom receipt printers fo
 Courses
 ===
 **Harvard CS50**, Introduction to Computer Science
+
 **MIT 6.172**, Performance Engineering of Software Systems, Fall 2018
 
 Educations
