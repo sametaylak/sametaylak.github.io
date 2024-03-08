@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-What am I learning right now?
+What am I learning right now??
 ===
 Improving my knowledge around neural networks by studying and implementing RAG based LLMs with using some domain specific data.
 
