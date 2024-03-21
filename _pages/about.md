@@ -9,11 +9,11 @@ redirect_from:
 
 What am I learning right now?
 ===
-Improving my knowledge around neural networks by studying and implementing RAG based LLMs with using some domain specific data.
+Working on a personal project that handles huge amount of data to group and aggregate.
 
 About Me
 ===
-I am a software engineer who is passionate about developing tools and solving challenges. I have mostly worked on full-stack development.
+A dedicated advocate for creating secure, swift, scalable, and thoroughly documented solutions.
 
 Skills
 ===
