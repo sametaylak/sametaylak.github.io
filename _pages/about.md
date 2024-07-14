@@ -7,19 +7,17 @@ redirect_from:
   - /about.html
 ---
 
-What am I learning right now?
-===
-Working on a personal project that handles huge amount of data to group and aggregate.
-
 About Me
 ===
 A dedicated advocate for creating secure, swift, scalable, and thoroughly documented solutions.
 
 Skills
 ===
-**General**: System design, microservices, real-time data handling, low-latency platforms, OOP(object oriented programming), functional programming, machine learning, software testing, REST APIs, GraphQL.
+**General**: System design, microservices, real-time data handling, low-latency communication, software testing.
 
-**Programming Languages**: TypeScript, JavaScript, Python, Ruby, Golang, C, C#, SQL, HTML, CSS
+**Programming Languages**: C, C++, Python, Rust, Golang, C#
+
+**Scripting Languages**: Python, TypeScript, JavaScript, Lua
 
 **Databases**: MySQL, PostgreSQL, MongoDB
 
@@ -35,9 +33,7 @@ Skills
 
 **CI/CD**: Jenkins, CircleCI, Azure DevOps, GitHub Actions
 
-**Tools**: Kafka, Redis, Upstash, JetBrains, Chrome Profiler, GDB
-
-**Management**: Jira, Linear, Asana, Slack, Discord
+**Management**: Jira, Linear, Asana, Slack
 
 Experiences
 ===
